@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-tag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmood Almadeh | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="container" style="text-align: left; padding: 20px 0;">
+        <button onclick="toggleLanguage()" id="lang-btn">English</button>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1 id="hero-name">محمود عبدالرضا المادح</h1>
+            <p id="hero-title">مطور واجهات ومصمم مشاريع تقنية</p>
+        </div>
+    </header>
+
+    <section id="projects" class="container">
+        <h2 id="section-title">مشاريعي المختارة</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card" onclick="toggleProject(this)">
+                <div class="card-header">
+                    <h3 id="p1-name">موقع البروفايل الشخصي</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <p id="p1-short">هذا الموقع الذي تتصفحه الآن؛ واجهة رقمية تعرض أعمالي.</p>
+                <div class="p-details">
+                    <hr>
+                    <p id="p1-long">تم بناء هذا الموقع باستخدام HTML, CSS, و JavaScript. يركز على سرعة التصفح ودعم اللغتين العربية والإنجليزية بشكل سلس.</p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="toggleProject(this)">
+                <div class="card-header">
+                    <h3 id="p2-name">متجر تطبيق موبايل</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <p id="p2-short">مشروع مستقبلي لمتجر إلكتروني متكامل.</p>
+                <div class="p-details">
+                    <hr>
+                    <p id="p2-long">قيد التطوير: يهدف المشروع لبناء منصة تسوق سهلة الاستخدام تركز على تجربة مستخدم الموبايل (Coming Soon).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
