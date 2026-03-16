@@ -4,8 +4,8 @@
     --accent: #6ea8d4;
     --accent-soft: rgba(110, 168, 212, 0.1);
     --accent-border: rgba(110, 168, 212, 0.25);
-    --text: #e2e8f0;
-    --muted: #7a8899;
+    --text: #f0f4f8;
+    --muted: #a8b8c8;
     --border: #1e2d42;
 }
 
@@ -114,10 +114,19 @@ header {
 
 .hero-title {
     font-size: 1rem;
-    color: var(--muted);
+    color: #a8b8c8;
     font-weight: 300;
     margin-top: 14px;
     line-height: 1.6;
+}
+
+.hero-summary {
+    font-size: 0.95rem;
+    color: #c8d8e8;
+    font-weight: 300;
+    margin-top: 12px;
+    line-height: 1.8;
+    max-width: 620px;
 }
 
 .hero-tags {
@@ -165,6 +174,68 @@ main {
     background: var(--border);
 }
 
+/* ── About ── */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.about-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.about-item:hover {
+    border-color: var(--accent-border);
+    box-shadow: 0 0 0 1px var(--accent-soft);
+}
+
+.about-item:hover .about-arrow {
+    opacity: 1;
+}
+
+.about-arrow {
+    margin-right: auto;
+    margin-left: 4px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.about-icon {
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
+.about-key {
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 4px;
+}
+
+.about-val {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #dce8f0;
+    line-height: 1.5;
+}
+
 /* ── Filter ── */
 .filter-bar {
     display: flex;
@@ -208,7 +279,7 @@ main {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-    transition: border-color 0.25s, box-shadow 0.25s, opacity 0.25s;
+    transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 .project-card:hover {
@@ -236,6 +307,15 @@ main {
     flex: 1;
 }
 
+.card-tag {
+    font-size: 0.68rem;
+    color: var(--accent);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
 .card-name {
     font-size: 1rem;
     font-weight: 700;
@@ -243,7 +323,7 @@ main {
 
 .card-short {
     font-size: 0.87rem;
-    color: var(--muted);
+    color: #a8b8c8;
     font-weight: 300;
     margin-top: 5px;
     line-height: 1.5;
@@ -283,7 +363,7 @@ main {
 }
 
 .project-card.active .card-details {
-    max-height: 200px;
+    max-height: 300px;
     opacity: 1;
 }
 
@@ -293,10 +373,66 @@ main {
 }
 
 .card-long {
-    font-size: 0.87rem;
-    color: var(--muted);
+    font-size: 0.9rem;
+    color: #b8c8d8;
     font-weight: 300;
     line-height: 1.8;
+}
+
+.card-stack {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.card-stack span {
+    font-size: 0.7rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Skills ── */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.skill-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+
+.skill-group-title {
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 12px;
+}
+
+.skill-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.skill-tags span {
+    font-size: 0.78rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: #b8c8d8;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 /* ── Footer ── */
@@ -327,5 +463,10 @@ footer {
 
     footer {
         margin: 0 24px;
+    }
+
+    .about-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
