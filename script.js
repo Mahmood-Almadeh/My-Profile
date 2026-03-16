@@ -1,14 +1,14 @@
 // ── Translations ───────────────────────────────────────────────
 const translations = {
     en: {
-        badge: 'Available for projects',
+        badge: 'Available for Jobs',
         name: 'Mahmood <span class="highlight">Almadeh</span>',
         title: 'Mobile App Developer & Frontend Designer',
         summary: 'A Computer Science graduate from the University of Bahrain, focused on cross-platform mobile development using Flutter and Ionic, with hands-on Firebase backend experience.',
         aboutLabel: 'About',
-        locationLabel: 'Location',
         eduLabel: 'Education',
         eduVal: 'B.Sc. Computer Science — University of Bahrain',
+        locationLabel: 'Location',
         phoneLabel: 'Phone',
         emailLabel: 'Email',
         section: 'Projects',
@@ -29,7 +29,7 @@ const translations = {
                 tag: 'Mobile · Coming Soon',
                 name: 'Mobile Shop App',
                 short: 'A full e-commerce mobile store with a smooth shopping experience.',
-                long: 'Under development: A user-friendly shopping platform built for mobile users, featuring product listings, cart, checkout, and Firebase backend.',
+                long: 'Under development: A user-friendly shopping platform for mobile users, featuring product listings, cart, checkout, and Firebase backend.',
             },
             {
                 tag: 'Mobile · University Project',
@@ -55,14 +55,14 @@ const translations = {
     },
 
     ar: {
-        badge: 'متاح للمشاريع',
+        badge: 'متاح للعمل',
         name: 'محمود <span class="highlight">المادح</span>',
         title: 'مطور تطبيقات موبايل ومصمم واجهات',
         summary: 'خريج علوم حاسوب من جامعة البحرين، متخصص في تطوير تطبيقات الجوال عبر المنصات باستخدام Flutter وIonic، مع خبرة عملية في Firebase.',
         aboutLabel: 'عن المطور',
-        locationLabel: 'الموقع',
         eduLabel: 'التعليم',
         eduVal: 'بكالوريوس علوم حاسوب — جامعة البحرين',
+        locationLabel: 'الموقع',
         phoneLabel: 'الهاتف',
         emailLabel: 'البريد الإلكتروني',
         section: 'المشاريع',
@@ -155,21 +155,20 @@ function toggleLanguage() {
 
     // About
     document.getElementById('about-label').textContent = t.aboutLabel;
-    document.getElementById('about-location-label').textContent = t.locationLabel;
     document.getElementById('about-edu-label').textContent = t.eduLabel;
     document.getElementById('about-edu-val').textContent = t.eduVal;
+    document.getElementById('about-location-label').textContent = t.locationLabel;
     document.getElementById('about-phone-label').textContent = t.phoneLabel;
     document.getElementById('about-email-label').textContent = t.emailLabel;
 
-    // Projects section
+    // Projects
     document.getElementById('section-title').textContent = t.section;
 
-    // Filter buttons
     document.querySelectorAll('.filter-btn').forEach((btn, i) => {
         btn.textContent = t.filters[i];
     });
 
-    // Project cards
+    // Cards — use class selectors only, no IDs
     document.querySelectorAll('.project-card').forEach((card, i) => {
         const p = t.projects[i];
         if (!p) return;
@@ -189,7 +188,7 @@ function toggleLanguage() {
     // Footer
     document.getElementById('footer-text').textContent = t.footer;
 
-    // Re-apply active filter
+    // Re-apply filter
     applyFilter(activeFilter);
 }
 

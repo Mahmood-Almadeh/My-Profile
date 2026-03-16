@@ -15,13 +15,11 @@
 
 <body>
 
-    <!-- Nav -->
     <nav>
         <span class="nav-logo">MA.dev</span>
         <button onclick="toggleLanguage()" id="lang-btn">العربية</button>
     </nav>
 
-    <!-- Hero -->
     <header>
         <div class="hero-badge" id="hero-badge">Available for Jobs</div>
         <h1 class="hero-name" id="hero-name">Mahmood <span class="highlight">Almadeh</span></h1>
@@ -48,10 +46,9 @@
             <div class="section-line"></div>
         </div>
         <div class="about-grid">
-
             <a class="about-item" href="https://www.uob.edu.bh" target="_blank">
                 <span class="about-icon">🎓</span>
-                <div>
+                <div class="about-text">
                     <div class="about-key" id="about-edu-label">Education</div>
                     <div class="about-val" id="about-edu-val">B.Sc. Computer Science — University of Bahrain</div>
                 </div>
@@ -59,7 +56,7 @@
             </a>
             <a class="about-item" href="https://maps.google.com/?q=Hamad+Town,+Bahrain" target="_blank">
                 <span class="about-icon">📍</span>
-                <div>
+                <div class="about-text">
                     <div class="about-key" id="about-location-label">Location</div>
                     <div class="about-val">Hamad Town, Bahrain</div>
                 </div>
@@ -67,7 +64,7 @@
             </a>
             <a class="about-item" href="tel:+97338786988">
                 <span class="about-icon">📞</span>
-                <div>
+                <div class="about-text">
                     <div class="about-key" id="about-phone-label">Phone</div>
                     <div class="about-val">+973 38786988</div>
                 </div>
@@ -75,7 +72,7 @@
             </a>
             <a class="about-item" href="mailto:mahmoodredha2001@gmail.com">
                 <span class="about-icon">✉️</span>
-                <div>
+                <div class="about-text">
                     <div class="about-key" id="about-email-label">Email</div>
                     <div class="about-val">mahmoodredha2001@gmail.com</div>
                 </div>
@@ -89,110 +86,101 @@
             <div class="section-line"></div>
         </div>
 
-        <div class="filter-bar" id="filter-bar">
+        <div class="filter-bar">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="web">Web</button>
             <button class="filter-btn" data-filter="mobile">Mobile</button>
         </div>
 
-        <div class="projects-grid" id="projects-grid">
+        <div class="projects-grid">
 
-            <!-- Project 1 -->
             <div class="project-card" data-type="web" onclick="toggleProject(this)">
                 <div class="card-top">
                     <div class="card-left">
                         <div class="card-tag">Web</div>
-                        <div class="card-name" id="p1-name">Personal Portfolio Site</div>
-                        <div class="card-short" id="p1-short">The website you're browsing now — a digital showcase of my
-                            work.</div>
+                        <div class="card-name">Personal Portfolio Site</div>
+                        <div class="card-short">The website you're browsing now — a digital showcase of my work.</div>
                     </div>
                     <div class="card-arrow">▼</div>
                 </div>
                 <div class="card-details">
                     <div class="card-details-inner">
-                        <p class="card-long" id="p1-long">Built with HTML, CSS, and JavaScript. Focuses on performance
-                            and seamless bilingual (AR/EN) support.</p>
+                        <p class="card-long">Built with HTML, CSS, and JavaScript. Focuses on performance and seamless
+                            bilingual (AR/EN) support.</p>
                         <div class="card-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2 - Mobile Shop (Coming Soon) -->
             <div class="project-card" data-type="mobile" onclick="toggleProject(this)">
                 <div class="card-top">
                     <div class="card-left">
                         <div class="card-tag">Mobile · Coming Soon</div>
-                        <div class="card-name" id="p2-name">Mobile Shop App</div>
-                        <div class="card-short" id="p2-short">A full e-commerce mobile store with a smooth shopping
-                            experience.</div>
+                        <div class="card-name">Mobile Shop App</div>
+                        <div class="card-short">A full e-commerce mobile store with a smooth shopping experience.</div>
                     </div>
                     <div class="card-arrow">▼</div>
                 </div>
                 <div class="card-details">
                     <div class="card-details-inner">
-                        <p class="card-long" id="p2-long">Under development: A user-friendly shopping platform built for
-                            mobile users, featuring product listings, cart, checkout, and Firebase backend.</p>
+                        <p class="card-long">Under development: A user-friendly shopping platform for mobile users,
+                            featuring product listings, cart, checkout, and Firebase backend.</p>
                         <div class="card-stack"><span>Flutter</span><span>Firebase</span><span>UI Design</span></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-card" data-type="mobile" onclick="toggleProject(this)">
                 <div class="card-top">
                     <div class="card-left">
                         <div class="card-tag">Mobile · University Project</div>
-                        <div class="card-name" id="p3-name">Online Library System</div>
-                        <div class="card-short" id="p2-short">Cross-platform library app with three user roles: Users,
-                            Staff, and Admin.</div>
+                        <div class="card-name">Online Library System</div>
+                        <div class="card-short">Cross-platform library app with three user roles: Users, Staff, and
+                            Admin.</div>
                     </div>
                     <div class="card-arrow">▼</div>
                 </div>
                 <div class="card-details">
                     <div class="card-details-inner">
-                        <p class="card-long" id="p2-long">Features book searching, borrowing system, and ratings.
-                            Includes a staff dashboard for inventory and an admin panel for managing personnel.</p>
+                        <p class="card-long">Features book searching, borrowing system, and ratings. Includes a staff
+                            dashboard for inventory and an admin panel for managing personnel.</p>
                         <div class="card-stack"><span>Ionic</span><span>Firebase</span><span>GitHub</span></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-card" data-type="mobile" onclick="toggleProject(this)">
                 <div class="card-top">
                     <div class="card-left">
                         <div class="card-tag">Mobile · Senior Project</div>
-                        <div class="card-name" id="p4-name">Clubs System for School</div>
-                        <div class="card-short" id="p3-short">Comprehensive club management for students, admins, and
-                            external experts.</div>
+                        <div class="card-name">Clubs System for School</div>
+                        <div class="card-short">Comprehensive club management for students, admins, and external
+                            experts.</div>
                     </div>
                     <div class="card-arrow">▼</div>
                 </div>
                 <div class="card-details">
                     <div class="card-details-inner">
-                        <p class="card-long" id="p3-long">Includes club creation requests, event facility reservations,
-                            in-app chat, event evaluations, and an admin approval workflow.</p>
+                        <p class="card-long">Includes club creation requests, event facility reservations, in-app chat,
+                            event evaluations, and an admin approval workflow.</p>
                         <div class="card-stack"><span>Flutter</span><span>Firebase</span><span>GitHub</span></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 4 -->
             <div class="project-card" data-type="mobile" onclick="toggleProject(this)">
                 <div class="card-top">
                     <div class="card-left">
                         <div class="card-tag">Mobile · Training Project</div>
-                        <div class="card-name" id="p5-name">Trivia Game</div>
-                        <div class="card-short" id="p4-short">Multi-mode trivia game with social features and in-app
-                            purchases.</div>
+                        <div class="card-name">Trivia Game</div>
+                        <div class="card-short">Multi-mode trivia game with social features and in-app purchases.</div>
                     </div>
                     <div class="card-arrow">▼</div>
                 </div>
                 <div class="card-details">
                     <div class="card-details-inner">
-                        <p class="card-long" id="p4-long">Three game modes (Levels, Endless, Custom), rank boards,
-                            achievements, friends system, and Google Authentication. Responsive UI across all screen
-                            sizes.</p>
+                        <p class="card-long">Three game modes (Levels, Endless, Custom), rank boards, achievements,
+                            friends system, and Google Authentication. Responsive UI across all screen sizes.</p>
                         <div class="card-stack"><span>Flutter</span><span>Firebase</span><span>Google
                                 Auth</span><span>In-App Purchases</span></div>
                     </div>
@@ -230,4 +218,10 @@
     </main>
 
     <footer>
-        <span class="footer-text" id="footer-t
+        <span class="footer-text" id="footer-text">© 2025 Mahmood Almadeh</span>
+        <span class="footer-text">Flutter · Firebase · Web</span>
+    </footer>
+
+</body>
+
+</html>
