@@ -2,17 +2,17 @@
 
 :root {
     --bg-top: #0a0e1a;
-    --bg-bottom: #0d1e32;
-    --surface: rgba(255, 255, 255, 0.04);
-    --surface2: rgba(255, 255, 255, 0.07);
-    --gold: #c9a84c;
-    --gold-soft: rgba(201, 168, 76, 0.12);
-    --gold-border: rgba(201, 168, 76, 0.28);
-    --text: #eef2f7;
-    --muted: #8fa0b4;
-    --dim: #5a6e84;
-    --border: rgba(255, 255, 255, 0.08);
-    --border-strong: rgba(255, 255, 255, 0.13);
+    --bg-bottom: #243347;
+    --surface: rgba(255, 255, 255, 0.05);
+    --surface2: rgba(255, 255, 255, 0.09);
+    --gold: #e2b96f;
+    --gold-soft: rgba(226, 185, 111, 0.13);
+    --gold-border: rgba(226, 185, 111, 0.32);
+    --text: #f4f7fa;
+    --muted: #a8bdcc;
+    --dim: #6e8899;
+    --border: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(255, 255, 255, 0.15);
 }
 
 *,
@@ -59,7 +59,7 @@ nav {
     align-items: center;
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(12px);
-    background: rgba(10, 14, 26, 0.6);
+    background: rgba(10, 14, 26, 0.75);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -206,7 +206,7 @@ header::after {
 
 .hero-summary {
     font-size: 1rem;
-    color: #b8cad8;
+    color: #ccdae6;
     font-weight: 300;
     margin-top: 18px;
     line-height: 1.9;
@@ -474,7 +474,7 @@ main {
 
 .card-long {
     font-size: 0.9rem;
-    color: #b8cad8;
+    color: #ccdae6;
     font-weight: 300;
     line-height: 1.85;
 }
