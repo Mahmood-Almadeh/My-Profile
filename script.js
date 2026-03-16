@@ -89,7 +89,7 @@ function toggleLanguage() {
 
     document.body.style.background = currentLang === 'ar'
         ? 'linear-gradient(260deg, var(--bg-top) 0%, var(--bg-bottom) 100%)'
-        : 'linear-gradient(150deg, var(--bg-top) 0%, var(--bg-bottom) 100%)';
+        : 'linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 100%)';
 
     const t = translations[currentLang];
 
