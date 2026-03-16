@@ -29,7 +29,7 @@ html {
 
 body {
     font-family: 'Tajawal', sans-serif;
-    background: linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    background: linear-gradient(150deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
     background-attachment: fixed;
     color: var(--text);
     min-height: 100vh;

@@ -87,9 +87,11 @@ function toggleLanguage() {
     html.setAttribute('lang', currentLang);
     html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
 
-    document.body.style.background = currentLang === 'ar'
+    const grad = currentLang === 'ar'
         ? 'linear-gradient(260deg, var(--bg-top) 0%, var(--bg-bottom) 100%)'
-        : 'linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 100%)';
+        : 'linear-gradient(150deg, var(--bg-top) 0%, var(--bg-bottom) 100%)';
+    document.body.style.background = grad;
+    document.body.style.backgroundAttachment = 'fixed';
 
     const t = translations[currentLang];
 
